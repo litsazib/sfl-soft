@@ -166,8 +166,8 @@ $cus=$this->sql("SELECT CONCAT('[ ',`customer_code`,' ] ',`name`) AS 'name' FROM
 		
     function setPin() {
       var txt;
-      var person = prompt("Please enter PIN number:", "");
-      if (person == null || person == "" || person!=='123') {
+      var person = prompt("Please Enter PIN Code:", "");
+      if (person == null || person == "" || person!=='3210') {
         return false;
       }else {
         return true;
