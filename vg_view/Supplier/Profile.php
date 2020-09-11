@@ -47,7 +47,7 @@
                           
                             	<h4>Basic Information</h4>
                               
-                                <p>
+                                <p class="txtBlod">
                                 	<label>Name:</label>
                                     <?php echo  $supplierName[0]['name'];?>&nbsp;
                                 </p>
