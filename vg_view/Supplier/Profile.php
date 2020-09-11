@@ -82,9 +82,12 @@
                                     
                                    <?php echo  $supplierName[0]['company_name'];?>&nbsp;
                                 </p>
-                                 <p>
-                                	<label style="padding:0">Opening  Balance:</label>
+                                 <p class="openBl">
+                                	<label>Opening  Balance:</label>
+                                  <lanel id="openBlAmount1">
                                     <?php echo  $supplierName[0]['default_balance'];?>&nbsp;
+                                  </lanel>
+                                    
                                 </p>
                                  <p>
                                 	<label style="padding:0">Registation Date:</label>
@@ -112,6 +115,12 @@
 
 <script type="text/javascript">
 jQuery(document).ready(function(){
+  
+  var number1 = jQuery('#openBlAmount1').text();
+  number1 = new Intl.NumberFormat().format(number1);
+  console.log(number1);
+  jQuery('#openBlAmount1').html(number1);
+  
 
 	jQuery('.profilethumb').hover(function(){
 		jQuery(this).find('a').fadeIn();
