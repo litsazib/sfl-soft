@@ -12,6 +12,43 @@
   animation: gradient 15s ease infinite;
 }
 
+.content-dashboard {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+}
+.dashboardTitle{
+    color: #fff;
+  text-align: center;
+  font-size: 75px;
+  margin-top: 11%;
+}    
+.widgeticons {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+}
+.widgeticons li a {
+  border: 1px solid #ccc;
+  /* background: transparent !important; */
+  text-align: center;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}
+.widgeticons li a span {
+  margin-top: 30px !important;
+  color: #fff;
+}
+.one_fifth {
+  width: 14.3% !important;
+  margin-right: 0% !important;
+}
+.subT {
+  text-align: center;
+  font-size: 33px;
+  margin-top: 40px;
+  color: #f7f7f7;
+}
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
