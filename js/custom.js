@@ -368,13 +368,13 @@ jQuery(document).ready(function(){
 	jQuery('.skin-layout').click(function(){
 		jQuery('.skin-layout').each(function(){ jQuery(this).parent().removeClass('selected'); });
 		if(jQuery(this).hasClass('fixed')) {
-			jQuery('.mainwrapper').removeClass('fullwrapper');
-			if(jQuery('.stickyheaderinner').length > 0) jQuery('.stickyheaderinner').removeClass('wideheader');
-			jQuery.cookie("skin-layout", 'fixed', { path: '/' });
+      jQuery('.mainwrapper').removeClass('fullwrapper');
+      if(jQuery('.stickyheaderinner').length > 0) jQuery('.stickyheaderinner').removeClass('wideheader');
+      jQuery.cookie("skin-layout", 'fixed', { path: '/' });
 		} else {
-			jQuery('.mainwrapper').addClass('fullwrapper');
-			if(jQuery('.stickyheaderinner').length > 0) jQuery('.stickyheaderinner').addClass('wideheader');
-			jQuery.cookie("skin-layout", 'wide', { path: '/' });
+      jQuery('.mainwrapper').addClass('fullwrapper');
+      if(jQuery('.stickyheaderinner').length > 0) jQuery('.stickyheaderinner').addClass('wideheader');
+      jQuery.cookie("skin-layout", 'wide', { path: '/' });
 		}
 		return false;
 	});

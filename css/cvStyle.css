@@ -1,3 +1,6 @@
+.mainwrapper {
+  width: 100% !important;
+}
 .openBl {
   background: #38d8a4;
   color: #fff;
