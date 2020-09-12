@@ -3,11 +3,11 @@
 
 class Connection {
 
-  protected $host ="localhost";
-  protected $dbname ="solaiman_soft";
-  protected $user ="solaiman_soft";
-  protected $pass ="-I1oe^a4r+PH";
-  protected $DBH;
+    protected $host = "localhost";
+    protected $dbname = "codingav_sfl";
+    protected $user = "root";
+    protected $pass = "root";
+    protected $DBH;
 
     function __construct() {
  if(i_key!='solaimanfeedsltd@gmail.com'){exit();}
