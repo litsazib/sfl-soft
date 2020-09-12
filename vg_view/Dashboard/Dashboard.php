@@ -3,10 +3,10 @@
 <div class="mainwrapper">
 	<?php require_once(View."menu.php");?>
         <div class="breadcrumbwidget">
-        	<ul class="skins">
+        	<!-- <ul class="skins">
                 <li class="fixed"><a href="#" class="skin-layout fixed"></a></li>
                 <li class="wide"><a href="#" class="skin-layout wide"></a></li>
-            </ul><!--skins-->
+            </ul> -->
         	<ul class="breadcrumb">
                 <li><a href="./?Home_Dashboard" title="Go Dashboard">Dashboard</a> <span class="divider">/</span></li>
                 <li class="active">Home</li>
