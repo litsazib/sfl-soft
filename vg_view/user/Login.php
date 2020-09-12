@@ -56,7 +56,8 @@ jQuery(document).ready(function(){
 				});
 							}else{
 								jQuery('.loginwrapper').addClass('animate0 fadeOutUp').bind(anievent,function(){
-					window.location= "<?php echo BASE_URL?>?User_Profile";
+					// window.location= "<?php echo BASE_URL?>?User_Profile";
+					window.location= "<?php echo BASE_URL?>?Home_Dashboard";
 								});
 								
 								}

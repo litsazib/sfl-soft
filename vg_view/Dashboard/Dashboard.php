@@ -29,15 +29,15 @@
         <div class="row-fluid">
       	   <div class="span11">
         	 <ul class="widgeticons row-fluid">
-            	<?php?><li class="one_fifth"><a href="#"><img width="70%;" src="img/gemicon/userIcon.webp" alt="" /><span>User: <?php echo $totalUser[0]['t_user']?></span></a></li><?php?>
+            	<?php?><li class="one_fifth"><a href="?User_Profile"><img width="70%;" src="img/gemicon/userIcon.webp" alt="" /><span>User: <?php echo $totalUser[0]['t_user']?></span></a></li><?php?>
               
                 <li class="one_fifth"><a href="./?Supplier_AllSupplier"><img width="70%" src="img/gemicon/supplayer.png" alt="" /><span>Supplier: <?php echo $vg_supplier[0]['vg_supplier']?></span></a></li>
                 
                 <li class="one_fifth"><a href="./?Customer_AllCustomer"><img width="70px;" src="img/gemicon/customer.jpg" alt="" /><span>Customer: <?php echo $customer[0]['customer']?></span></a></li>
                 
-                <li class="one_fifth last"><a href="#"><img src="img/gemicon/purchase.png" alt="" /><span>P.INV: <?php echo $Purchase[0]['t_p_inv']?></span></a></li>
+                <li class="one_fifth last"><a href="?ManageProduct_ManageProduct"><img src="img/gemicon/purchase.png" alt="" /><span>P.INV: <?php echo $Purchase[0]['t_p_inv']?></span></a></li>
                 
-            	<li class="one_fifth last"><a href="#"><img src="img/gemicon/sales.png" alt="" /><span>S.INV: <?php echo $Sales[0]['t_s_inv']?></span></a></li>
+            	<li class="one_fifth last"><a href="?Sales_SalesPD"><img src="img/gemicon/sales.png" alt="" /><span>S.INV: <?php echo $Sales[0]['t_s_inv']?></span></a></li>
               
             </ul>
                 
@@ -47,6 +47,14 @@
         </div>
          <h1 class="dashboardTitle">SOLAIMAN FEEDS LTD</h1>
          <h5 class="subT">Stock Managment Sulation</h5>
+         <div class="codingavatar">
+           <p>
+             <span>Powered by: </span>
+             <a class="cv_logo" href="http://codingavatar.com/" target="_blank">
+               <img src="img/codingavatar/logo.png" alt="">
+             </a>
+           </p>
+         </div>
         </div>
 
     </div>

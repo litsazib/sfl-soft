@@ -28,7 +28,9 @@
         
         <div class="maincontent">
         	<div class="contentinner content-editprofile">
-            	<h4 class="widgettitle nomargin">User Profile <a class="btn" href="?User_ProfileUpdate">Update Profile</a></h4>
+            	<h4 class="widgettitle nomargin">User Profile 
+                <a class="btn btn-eidt" href="?User_ProfileUpdate">Update Profile <i class="icon-edit"></i></a>
+              </h4>
                 <div class="widgetcontent bordered">
                 	<div class="row-fluid">
                     	<div class="span3 profile-left">
@@ -49,7 +51,7 @@
                           
                             	<h4>Login Information</h4>
                                 <p>
-                                	<label>Username:</label>
+                                	<label>User Name:</label>
                                 	<?php echo $_SESSION['LoginStatus'][0]['firstname']." ".$_SESSION['LoginStatus'][0]['lastname'];?>
                                 </p>
                                 <p>
@@ -65,15 +67,15 @@
                                 
                                 <h4>Personal Information</h4>
                                 <p>
-                                	<label>Firstname:</label>
+                                	<label>First Name:</label>
                                 	 <?php echo $_SESSION['LoginStatus'][0]['firstname'];?>
                                 </p>
                                 <p>
-                                	<label>Lastname:</label>
+                                	<label>Last Name:</label>
                                     <?php echo $_SESSION['LoginStatus'][0]['lastname'];?>
                                 </p>
                                 <p>
-                                	<label>Location:</label>
+                                	<label>Join Date:</label>
                                    <?php echo $_SESSION['LoginStatus'][0]['joindate'];?>
                                 </p>
                                
