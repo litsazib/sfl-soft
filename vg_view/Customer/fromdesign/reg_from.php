@@ -25,8 +25,8 @@
     </p>
                         
                         <p class="animate7 bounceIn">
-                        	<label>Contact</label>
-                            <span class="field"><input type="text" name="contact" id="contact" class="input-large" placeholder="Mobile Number" /></span>
+                        	<label>Contact<sup><strong style="color:#F00">*</strong></sup></label>
+                            <span class="field"><input type="text" name="contact" minlength="5" maxlength="11"  pattern="[0-9]+" id="contact" class="input-large" placeholder="Mobile Number" /></span>
                         </p>
                         
                         <p class="animate8 bounceIn">
@@ -59,7 +59,7 @@
                         	<label>Opening  Balance</label>
                             <span class="field">
                             
-                           <input name="default_balance" type="text" id="default_balance" value="0" />
+                           <input name="default_balance" type="number" id="default_balance" value="0" />
                             
                             </span>
                         </p>
@@ -74,7 +74,7 @@
                         </p>
                         
                         <p class="stdformbutton animate9 bounceIn">
-                            <button id="registation" class="btn btn-primary">Submit Customer Registration</button>
+                            <button id="registation" class="btn btn-primary">Submit</button>
                            
                         </p>
                         

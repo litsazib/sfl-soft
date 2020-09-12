@@ -41,7 +41,7 @@
                         
                         
                         <p class="stdformbutton animate9 bounceIn" align="right">
-                            <button id="registation" class="btn btn-primary">Submit Sub Catagory Registration</button>
+                            <button id="registation" class="btn btn-primary">Submit</button>
                            
                         </p>
                         

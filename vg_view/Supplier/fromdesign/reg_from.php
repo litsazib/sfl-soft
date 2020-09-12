@@ -18,12 +18,12 @@
                         
   <p class="animate6 bounceIn">
    	<label>E-mail</label>
-      <span class="field"><input type="text" name="email" class="input-large" placeholder="Email" id="email" /></span>
+      <span class="field"><input type="email" name="email" class="input-large" placeholder="Email" id="email" required /></span>
     </p>
                         
                         <p class="animate7 bounceIn">
-                        	<label>Contact</label>
-                            <span class="field"><input type="text" name="contact" id="contact" class="input-large" placeholder="Mobile Number" required /></span>
+                        	<label>Contact<sup><strong style="color:#F00">*</strong></sup></label>
+                          <span class="field"><input type="text" minlength="5" maxlength="11"  pattern="[0-9]+" name="contact" id="contact" class="input-large" placeholder="Mobile Number" required /></span>
                         </p>
                         
                         <p class="animate8 bounceIn">
@@ -43,7 +43,7 @@
                         	<label>Opening  Balance</label>
                             <span class="field">
                             
-                           <input name="default_balance" type="text" id="default_balance" value="0" />
+                           <input name="default_balance" type="number" id="default_balance" value="0" />
                             
                             </span>
                         </p>
@@ -59,7 +59,7 @@
                         
                         
                         <p class="stdformbutton animate9 bounceIn">
-                            <button id="registation" class="btn btn-primary">Submit  Registration</button>
+                            <button id="registation" class="btn btn-primary">Submit</button>
                            
                         </p>
                         

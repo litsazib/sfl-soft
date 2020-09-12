@@ -22,6 +22,7 @@
 @import url('jquery.chosen.css');
 @import url('fullcalendar.css');
 @import url('font-awesome-ie7.css');
+@import url('cvStyle.css');
 @import url('../fonts/roboto.css');
 
 
@@ -54,7 +55,7 @@ img { display: block; }
 small { font-size: 11px; line-height: 18px; }
 pre { font-size: 11px; }
 
-input,select,textarea,button,label { color: #666; font-family: 'HelveticaNeue', Arial, sans-serif; font-size: 12px; outline: none; margin: 0; }
+input,select,textarea,button,label { color: #666; font-family: 'HelveticaNeue', Arial, sans-serif; font-size: 15px; outline: none; margin: 0; }
 
 h1,h2,h3,h4 { color: #333; font-weight: normal; }
 h1 { font-size: 28px; line-height: 38px; }
@@ -861,14 +862,14 @@ ul.list-nostyle li span, ol.list-nostyle li span { vertical-align: top; }
 .profilethumb a { display: none; font-size: 11px; position: absolute; top: 5px; right: 5px; padding: 2px 7px; background: #333; color: #fff; }
 .profilethumb a:hover { text-decoration: none; background: #444; }
 
-.editprofileform label { float: left; width: 100px; padding-top: 5px; }
+.editprofileform label { float: left; width: 200px; padding-top: 5px; font-size: 20px;}
 .editprofileform input[type=checkbox] { margin: 0; margin-right: 10px; vertical-align: middle; }
 
 .profile-left h4, .editprofileform h4 { 
 	font-size: 12px; text-transform: uppercase; color: #999; padding-bottom: 2px; border-bottom: 1px solid #ddd; 
 	margin-bottom: 20px; font-weight: bold; 
 }
-.editprofileform p { margin: 20px 0; }
+.editprofileform p { margin: 20px 0; font-size: 20px; font-weight: bold;}
 
 /***** INVOICE STYLES *****/
 /**************************/

@@ -93,11 +93,12 @@
                                 	<label style="padding:0px;">Customer Type:</label>
                                     
                                 <?php echo  $CustomerName[0]['cutomer_type'];?></p>
-                                 <p>
+                                 <p class="openBl">
                                	   <label style="padding:0px;">Opening  Balance:</label>
-                                    
-                                   <?php echo  $CustomerName[0]['default_balance'];?>
-                                    &nbsp;
+                                    <lanel id="openBlAmount">
+                                      <?php echo  $CustomerName[0]['default_balance'];?>
+                                       &nbsp;
+                                    </lanel>
                         </p>
                                 
                                 
@@ -128,6 +129,14 @@
 
 <script type="text/javascript">
 jQuery(document).ready(function(){
+  
+  var number = jQuery('#openBlAmount').text();
+  number = new Intl.NumberFormat().format(number);
+  jQuery('#openBlAmount').html(number);
+
+
+
+
 
 	jQuery('.profilethumb').hover(function(){
 		jQuery(this).find('a').fadeIn();

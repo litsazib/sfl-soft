@@ -25,11 +25,11 @@ $activeColorC='style="background-color:rgba(13, 156, 31, 0.49);"';
  <!-- START OF LEFT PANEL -->
     <div class="leftpanel">
     	
-        <div class="logopanel">
+        <div class="logopanel gd">
         	<h1><a href="#">Solaiman Feeds <span><sub> Ltd</sub></span></a></h1>
         </div><!--logopanel-->
         
-        <div class="datewidget" id="TimeStart"> Tuesday, Dec 25, 2012 5:30pm</div>
+        <div class="datewidget" style="color:#fff;" id="TimeStartNO"> HotLine:+8801724-255853</div>
     
     	
         <div class="leftmenu">        
