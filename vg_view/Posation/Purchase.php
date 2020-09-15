@@ -31,9 +31,9 @@
                         
                      <?php
                      
-					 //require($this->Paymentfrom);
-					 
-					 ?>
+          					 require($this->Paymentfrom);
+          					 
+          					 ?>
                      
                     </div><!--span6-->
                   
