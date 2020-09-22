@@ -3,8 +3,6 @@
 <div class="mainwrapper">
 	<?php require_once(View."menu.php");?>
 
-   <h1>Hallo</h1>
-   
         <div class="breadcrumbwidget">
         	<ul class="skins">
                 

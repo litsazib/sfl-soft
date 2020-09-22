@@ -64,20 +64,18 @@ $activeColorC='style="background-color:rgba(13, 156, 31, 0.49);"';
                     </ul>
                 </li>
                 
-                <li class="dropdown"><a href="#"><span class="icon-th-list"></span> Cash Posation</a>
-                	<ul>
-                    
-                       <!-- <li class="<?php echo @$this->PurchasePayment;?>"><a href="./?Payment_Purchase"><span class="iconsweets-cart4"></span> Purchase Payment</a></li>
-                                 
-                       <li class="<?php echo @$this->SalesPayment;?>"><a href="./?Payment_Sales"><span class="iconsweets-pricetag"></span> Sales Payment Collection</a></li> -->
-                                 
-                                 
+              <li class="active dropdown"><a href="#"><span class="icon-th-list"></span> Cash Posation</a>
+                	<ul style="display:block;">
                     <!-- tk asa -->
-                    <li><a href="./?Posation_Sales"><span class="iconsweets-pricetag"></span> Cahs Received | Cr.</a></li>  
+                    <li <?php if(@$GLOBALS['PageMethode']=="CashReceived"){echo $activeColorC;}?>>
+                      <a href="./?Posation_CashReceived"><span class="iconsweets-pricetag"></span> Cahs Received | Cr.</a>
+                    </li>  
                     <!-- tk jassa -->
-                    <li><a href="./?Posation_Purchase"><span class="iconsweets-pricetag"></span> Cash Payment | Dr.</a></li>  
+                    <li <?php if(@$GLOBALS['PageMethode']=="CashPayment"){echo $activeColorC;}?>>
+                      <a href="./?Posation_CashPayment"><span class="iconsweets-pricetag"></span> Cash Payment | Dr.</a>
+                    </li>  
                   </ul>
-                </li>
+              </li>
                 
                 
                 
