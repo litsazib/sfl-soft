@@ -19,33 +19,58 @@ class Posation extends Crud{
   public function CashReceived(){
     $this->LoginAllredy(true);
       if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-        if(isset($_POST["Message"])!="" && isset($_POST["reference"])!="" && isset($_POST["Paying"])!="0" && isset($_POST['CustomerID'])!="0" && isset($_POST['payamounts'])!=""){
-        $check=$this->sql("SELECT * FROM `customer_accounts` WHERE `recipt_code`=".$this->DBH->quote($_POST["recipt_code"])."");
-          if(!$check){	
-                        
-          $netamount=$this->sql("SELECT SUM(`total_amount`-`payment_amount`) AS 'netamount' FROM `customer_accounts` WHERE `customer_id`=".$this->DBH->quote($_POST["CustomerID"])."");
-           
-          $totalNet=($netamount[0]['netamount']-$_POST['payamounts']);
-          $insert=$this->insert("customer_accounts",array("customer_id"=>$_POST['CustomerID'],
-          "reperence_status"=>"Payment",
-          "ref_osm_full_id"=>$_POST['reference'],
-          "payment_amount"=>$_POST['payamounts'],
-          "net_blance"=>$totalNet,
-          "accounts_id"=>$_POST['Paying'],
-          "bank_name"=>$_POST["bank_name"],
-          "cheque_number"=>$_POST["cheque_number"],
-          "recipt_code"=>$_POST["recipt_code"],
-          "remarks"=>$_POST["Message"]
-          ));
-            if($insert){
-              echo "Success";
-              }else{
-                echo "Error";
-                }		
-            }else{
-              echo "Existe";
-              }
-            
+        if(isset($_POST["Message"])!="" && isset($_POST["Paying"])!="0" && isset($_POST['CustomerID'])!="0" && isset($_POST['ReceivedAmount'])!=""){
+          
+          // $insert=$this->insert("cash_received",array("customer_id"=>$_POST['CustomerID'],
+          // "recipt_code"=>$_POST["recipt_code"],
+          // "reperence_status"=>"CashReceived",
+          // "acc_head"=>$_POST['ac_head'],
+          // "total_amount"=>"0.00"
+          // "payment_amount"=>$_POST['ReceivedAmount'],
+          // "net_blance"=>"0.00",
+          // "accounts_id"=>$_POST['Paying'],
+          // "bank_name"=>$_POST["bank_name"],
+          // "cheque_number"=>$_POST["cheque_number"],
+          // "remarks"=>$_POST["Message"]
+          // ));
+          
+          // echo $_POST['RecDate'];
+          // echo $_POST['recipt_code'];
+          // echo $_POST['ReceivedAmount'];
+          // echo $_POST['Paying'];
+          // echo $_POST['bank_name'];
+          // echo $_POST['cheque_number'];
+          // echo $_POST['Message'];
+          echo $_POST['ac_head'];
+
+          
+          
+        // $check=$this->sql("SELECT * FROM `cash_received` WHERE `recipt_code`=".$this->DBH->quote($_POST["recipt_code"])."");
+        //   if(!$check){
+        // 
+        //   $netamount=$this->sql("SELECT SUM(`total_amount`-`payment_amount`) AS 'netamount' FROM `cash_received` WHERE `customer_id`=".$this->DBH->quote($_POST["CustomerID"])."");
+        // 
+        //   $totalNet=($netamount[0]['netamount']-$_POST['payamounts']);
+        //   $insert=$this->insert("cash_received",array("customer_id"=>$_POST['CustomerID'],
+        //   "reperence_status"=>"Payment",
+        //   "ref_osm_full_id"=>$_POST['reference'],
+        //   "payment_amount"=>$_POST['payamounts'],
+        //   "net_blance"=>$totalNet,
+        //   "accounts_id"=>$_POST['Paying'],
+        //   "bank_name"=>$_POST["bank_name"],
+        //   "cheque_number"=>$_POST["cheque_number"],
+        //   "recipt_code"=>$_POST["recipt_code"],
+        //   "remarks"=>$_POST["Message"]
+        //   ));
+        //     if($insert){
+        //       echo "Success";
+        //       }else{
+        //         echo "Error";
+        //         }		
+        //     }else{
+        //       echo "Existe";
+        //       }
+        // 
             }else{
               echo "MissingData";
               }			

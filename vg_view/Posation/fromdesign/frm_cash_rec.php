@@ -12,6 +12,7 @@
             ?>
             <td width="305" class="width70" style="background:#f7f7f7">
               <strong>
+                <input id="reciptCode" type="hidden" name="" value="<?php echo $inID?>">
               <label><?php echo 'R-'.$inID;?></label>
               </strong>
             </td>
@@ -30,7 +31,7 @@
               <select class="form-control required customer " 
               id="CustomerID" name="SupplierNmae" 
               style="width:100%;" aria-required="true">
-                <option value="0">Default Custome</option>
+                <option value="Default">Default Custome</option>
                 <?php
                   $res=$this->sql("SELECT `customer_id`,CONCAT('[ ',`customer_code`,' ] ',`name`) AS 'name' FROM `customer`");
         		
@@ -47,11 +48,11 @@
           </tr>
           <tr>
             <td class="width30">A/C Head Name (Cr.)</td>
-            <td class="width70"><input name="reference" type="text" id="reference"/></td>
+            <td class="width70"><input name="ac_head" type="text" value="Default" id="ac_head" placeholder="Default"/></td>
           </tr>
           <tr> 
             <td>Received Amounts<span style="color:#ff0000">*</span></td>
-            <td><input name="payamounts" type="number" id="payamounts" /></td>
+            <td><input name="ReceivedAmount" type="number" id="ReceivedAmount" required /></td>
           </tr>
           <tr>
             <td>Received Methord <span style="color:#ff0000">*</span></td>
@@ -91,7 +92,7 @@
           </tr>
           <tr>
             <td>Remark</td>
-            <td><textarea name="Message" id="Message" cols="50" rows="6"></textarea></td>
+            <td><textarea name="Message" id="Message" cols="10" rows="6"></textarea></td>
           </tr>
           
           <tr>
@@ -100,7 +101,7 @@
               <input type="submit" 
               name="purchasePaymentbtn" 
               class="btn btn-primary btn-large" 
-              id="SalesPaymentbtn"
+              id="SaveBtn"
               value="Save">          
             </td>
           </tr>
@@ -112,24 +113,8 @@
       
 <script type="text/javascript">
 jQuery.noConflict();
-
-				 jQuery(function($){ 
-				 
-		$('.customer').chosen();
-	var clone = $("table tr.data-wrapper:first").clone(true);
-	$('#delauto').hide();
-    $('select.pdid').chosen({width: "350px"});
-	$('body').on('click', '.add-new-data', function() {
-		var ParentRow = $("table tr.data-wrapper").last();
-		clone.clone(true).insertAfter(ParentRow);
-		$('tr.data-wrapper:last select.pdid').chosen({width: "350px"});
-	});
-	
-	
-	
-	
-	
-	$('body').on("change", "#Paying", function() {
+jQuery(function($){
+$('body').on("change", "#Paying", function() {
 		
 		var cheque=parseInt($("#Paying").val());
     $("#checqShow").hide();
@@ -150,66 +135,31 @@ jQuery.noConflict();
 	
 	
 	
-	$('body').on('click', '#SalesPaymentbtn', function() {
-		
-		
-				
-		var paymaount=parseInt($('#payamounts ').val());
-		
-		if($('#Message').val() == '' || $('#reference ').val() == '' || $('#CustomerID').val() == '0' || paymaount=='NaN' ){
-			jAlert('Please Type Your Message for your Custome Field Manage!', 'Alert');
-			}else{
-				     
-					 $.post("<?php echo BASE_URL?>?Payment_Sales",{
-						 Message: $('#Message').val(),
-						 reference: $('#reference').val(),
-						 Paying: $('#Paying').val(),
-						 CustomerID: $('#CustomerID').val(),
-						 payamounts: $('#payamounts').val(),
-						 bank_name: $('#bank_name').val(),
-						 cheque_number: $('#cheque_number').val(),
-						 recipt_code:$('#recipt_code').val()
-						  },
-						 function(data){
-							
-						
-							 switch(data){
-								
-								 case 'Success':
-								jConfirm('Do you want view payment receipt ?', 'Sales payment receipt View', function(r) {
-    							   
-									if(r){
-								
-			$('#result').load('<?php echo BASE_URL?>?SingelReport_paymentReceiptS&getID='+$('#recipt_code').val()+' #resultt');
-										//
-										}else{
-										location.reload();
-											}
-  								 });
-								 break;
-								
-								
-								 case 'MissingData':
-								 jAlert("Please check this your every input System & try again", 'Alert');
-								 break;
-								 case 'Existe':
-								  jAlert("Data allready Existes", 'Alert');
-								 break;
-								 case 'Error':
-								  jAlert("Please Try again", 'Alert');
-								 break;
-								 default:
-								 jAlert("Please check this your every input System & try again", 'Alert');
-								 }
-							 
-							 
-							 }
-						 
-						 
-						);
-					 
-					 
-				}
+$('body').on('click', '#SaveBtn', function() {
+
+  if($('#CustomerID').val() == '0'){
+    jAlert('Please Type Your Message for your Custome Field Manage!', 'Alert');
+    }else{
+           
+         $.post("<?php echo BASE_URL?>?Posation_CashReceived",{
+           RecDate: $('#ReceivedDatepicker').val(),
+           Message: $('#Message').val(),
+           ac_head: $('#ac_head').val(),
+           Paying: $('#Paying').val(),
+           CustomerID: $('#CustomerID').val(),
+           ReceivedAmount: $('#ReceivedAmount').val(),
+           bank_name: $('#bank_name').val(),
+           cheque_number: $('#cheque_number').val(),
+           recipt_code:$('#reciptCode').val()
+          },
+           function(data){
+             console.log(data);
+
+             }
+          );
+      }
+    
+
 		
 	});
 	
