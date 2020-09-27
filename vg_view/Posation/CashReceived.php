@@ -15,7 +15,7 @@
             </ul>
         </div><!--breadcrumbs-->
         <div class="pagetitle">
-        	<h1>Cash Recived | Cr.</h1>
+        	<h1> Daily Cash Recived</h1>
         </div><!--pagetitle-->
         
        

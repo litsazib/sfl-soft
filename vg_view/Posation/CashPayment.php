@@ -17,7 +17,7 @@
             </ul>
         </div><!--breadcrumbs-->
         <div class="pagetitle">
-        	<h1>Cash Payment | Dr.</h1> 
+        	<h1>Daily Cash Payment</h1> 
         </div><!--pagetitle-->
         
        
