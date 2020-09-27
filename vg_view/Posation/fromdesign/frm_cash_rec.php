@@ -93,29 +93,22 @@
             <td>Remark</td>
             <td><textarea name="Message" id="Message" cols="50" rows="6"></textarea></td>
           </tr>
-                      <tr>
-                        <td colspan="2"> 
-                        <div align="right">
-        <input type="submit" name="purchasePaymentbtn" class="btn btn-primary btn-large" id="SalesPaymentbtn" value="Sales Payment" />          
-        		</div></td>
-                      </tr>
-                  </table>
-                  
-                  
-                  
-                </div><!--span6-->
-                
-                
-                
+          
+          <tr>
+            <td></td>
+            <td> 
+              <input type="submit" 
+              name="purchasePaymentbtn" 
+              class="btn btn-primary btn-large" 
+              id="SalesPaymentbtn"
+              value="Save">          
+            </td>
+          </tr>
+          </table>
+          </div>  
 				</div>
-                
-                
-    </div><!--row-fluid-->
-            
-           
-               
-                
- </div><!--contentinner-->
+    </div>
+ </div>
       
 <script type="text/javascript">
 jQuery.noConflict();
@@ -139,6 +132,9 @@ jQuery.noConflict();
 	$('body').on("change", "#Paying", function() {
 		
 		var cheque=parseInt($("#Paying").val());
+    $("#checqShow").hide();
+    $("#bkashShow").hide();
+    
 		if(cheque==3){
 			$("#checqShow").show();
     }else if (cheque==2){
