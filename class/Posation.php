@@ -21,18 +21,18 @@ class Posation extends Crud{
       if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         if(isset($_POST["Message"])!="" && isset($_POST["Paying"])!="0" && isset($_POST['CustomerID'])!="0" && isset($_POST['ReceivedAmount'])!=""){
           
-          // $insert=$this->insert("cash_received",array("customer_id"=>$_POST['CustomerID'],
-          // "recipt_code"=>$_POST["recipt_code"],
-          // "reperence_status"=>"CashReceived",
-          // "acc_head"=>$_POST['ac_head'],
-          // "total_amount"=>"0.00"
-          // "payment_amount"=>$_POST['ReceivedAmount'],
-          // "net_blance"=>"0.00",
-          // "accounts_id"=>$_POST['Paying'],
-          // "bank_name"=>$_POST["bank_name"],
-          // "cheque_number"=>$_POST["cheque_number"],
-          // "remarks"=>$_POST["Message"]
-          // ));
+        echo  $insert=$this->insert("cash_received",array("customer_id"=>$_POST['CustomerID'],
+          "recipt_code"=>$_POST["recipt_code"],
+          "reperence_status"=>"CashReceived",
+          "acc_head"=>$_POST['ac_head'],
+          "total_amount"=>"0.00"
+          "payment_amount"=>$_POST["ReceivedAmount"],
+          "net_blance"=>"0.00",
+          "accounts_id"=>$_POST['Paying'],
+          "bank_name"=>$_POST["bank_name"],
+          "cheque_number"=>$_POST["cheque_number"],
+          "remarks"=>$_POST["Message"]
+          ));
           
           // echo $_POST['RecDate'];
           // echo $_POST['recipt_code'];
@@ -41,7 +41,7 @@ class Posation extends Crud{
           // echo $_POST['bank_name'];
           // echo $_POST['cheque_number'];
           // echo $_POST['Message'];
-          echo $_POST['ac_head'];
+          // echo $_POST['ac_head'];
 
           
           
@@ -73,7 +73,7 @@ class Posation extends Crud{
         // 
             }else{
               echo "MissingData";
-              }			
+            }			
           
             exit(0);
           }
@@ -103,7 +103,7 @@ class Posation extends Crud{
         $js_footer=array();  
   }
   
-	public function CashPayment(){
+	// public function CashPayment(){
 		$this->LoginAllredy(true);		
 	    if ($_SERVER['REQUEST_METHOD'] === 'POST'){		
 				if(isset($_POST["Message"])!="" && isset($_POST["reference"])!="" && isset($_POST["Paying"])!="0" && isset($_POST['supplierID'])!="0" && isset($_POST['payamounts'])!=""){						

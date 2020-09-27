@@ -136,6 +136,10 @@ $('body').on("change", "#Paying", function() {
 	
 	
 $('body').on('click', '#SaveBtn', function() {
+  
+  // var ReceivedAmount=parseInt($('#ReceivedAmount ').val());
+  var payment_amount=parseFloat($('#ReceivedAmount').val());
+
 
   if($('#CustomerID').val() == '0'){
     jAlert('Please Type Your Message for your Custome Field Manage!', 'Alert');
@@ -147,7 +151,7 @@ $('body').on('click', '#SaveBtn', function() {
            ac_head: $('#ac_head').val(),
            Paying: $('#Paying').val(),
            CustomerID: $('#CustomerID').val(),
-           ReceivedAmount: $('#ReceivedAmount').val(),
+           payment_amount: $('#ReceivedAmount').val(),
            bank_name: $('#bank_name').val(),
            cheque_number: $('#cheque_number').val(),
            recipt_code:$('#reciptCode').val()
